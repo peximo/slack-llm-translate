@@ -1,0 +1,41 @@
+{
+  "name": "slack-llm-translate",
+  "version": "1.0.0",
+  "description": "Intelligent Slack bot with multi-LLM support (Ollama, Claude, OpenAI)",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "db:init": "sqlite3 db/conversations.db < schema.sql"
+  },
+  "keywords": [
+    "slack",
+    "bot",
+    "ollama",
+    "claude",
+    "openai",
+    "chatgpt",
+    "llm",
+    "ai",
+    "chatbot",
+    "multi-llm"
+  ],
+  "author": "Francesco Pesenti <peximo@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@slack/bolt": "^4.4.0",
+    "@slack/web-api": "^7.10.0",
+    "better-sqlite3": "^12.4.1",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "yargs-parser": "^22.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
